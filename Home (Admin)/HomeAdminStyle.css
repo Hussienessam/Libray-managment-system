@@ -1,0 +1,223 @@
+/* Style for the hole body. */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #E6E7E8;
+}
+
+#div2{
+    margin-left: 20%;
+}
+
+/* Style for the Navbar. */
+
+/* Style for the Navbar list which contains the list items. */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(51, 51, 51);
+}
+
+.li2 p {
+    margin-top: 35px;
+    margin-right: 7px;
+     color: white;
+}
+
+/* Style for the Navbar list items. */
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+/*    padding: 30px 20px;*/
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 15px;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: 0.2s;
+}
+
+li a:hover {
+    color: #FF6B00;
+}
+
+/* Style for the Navbar Logo */
+.Logo {
+    float: left;
+    margin-left: 1%;
+    margin-top: 1%;
+    width: 50px;
+    height: 50px;
+    display: inline;
+    transition: 0.4s;
+}
+
+.Logo:hover {
+    width: 60px;
+    height: 60px;
+    margin-left: 1%;
+    margin-top: 0.8%;
+}
+
+/* Style for the Navbar title next to the logo */
+.navname {
+    float: left;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    width: 30%;
+    margin-top: 2.3%;
+    margin-left: 10px;
+    transition: 0.2s;
+}
+
+.navname:hover {
+    color: #FF6B00;
+}
+
+/* End of the style for the Navbar. */
+
+/* The side navigation menu */
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 220px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+/* Style for the content inside side navbar. */
+.fas {
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 2%;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 2px;
+}
+
+.fas:hover {
+    opacity: 0.7;
+}
+
+/* Sidebar links */
+.sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover {
+    background-color: #555;
+    color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar a {
+        float: left;
+    }
+
+    div.content {
+        margin-left: 0;
+    }
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+}
+
+/* Style for the Middle image below the navbar. */
+.midimg {
+    margin: 0;
+    padding: 0;
+    margin-left: 220px;
+    background-image: url("Homemidimg.jpg");
+    background-color: #cccccc;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Style for the Header inside the Middle image below the navbar. */
+.middivheader {
+    margin: 0;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 26;
+    font-weight: bold;
+    padding-top: 3%;
+}
+
+/* Style for the Slogan inside the Middle image below the navbar. */
+.middivslogan {
+    display: block;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding-top: 23%;
+}
+
+/* Style for the second div below the middle image div. */
+.middiv {
+    text-align: center;
+    margin: auto;
+    margin-left: 230px;
+    height: 300px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    max-width: 75%;
+}
+
+/* Style for the text part inside the second div below the middle image div. */
+.rightpart {
+    float: right;
+    margin-top: -1%;
+    position: absolute;
+    margin-left: 32%;
+    padding-right: 20px;
+    text-align: left;
+}
+
+/* Style for the paragraphs inside the div below the middle image div. */
+.paragraphs {
+    font-family: monospace;
+    font-style: italic;
+    line-height: 1.5em;
+    font-size: 22px;
+}
+ 
