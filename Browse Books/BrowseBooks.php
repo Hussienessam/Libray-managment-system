@@ -8,7 +8,6 @@
     header('Cache-Control: no-store, no-cache, must-revalidate');
     header('Cache-Control: post-check=0, pre-check=0', FALSE);
     header('Pragma: no-cache');
-    session_start();
     $sort_by = 'ID';
     $sql = "SELECT * FROM books ORDER BY {$sort_by}";
     $result = mysqli_query($conn, $sql);
@@ -27,7 +26,7 @@
         $sql2 = "SELECT * FROM books WHERE ID = '$id'";
         $result2 = mysqli_query($conn, $sql2);
         $book = mysqli_fetch_assoc($result2);
-        $userName = $_SESSION['name']; 
+        $userName = $_SESSION['name'];
         $userEmail = $_SESSION['email'];
         $sql5 = "SELECT * FROM borrow";
         $result3 = mysqli_query($conn, $sql5);
@@ -81,7 +80,7 @@
             else {
                 $message = "You have not borrowed this book!!";
                 echo "<script type='text/javascript'>alert('$message');</script>";
-            }  
+            }
         }
         clearstatcache();
         mysqli_free_result($result);
@@ -105,39 +104,10 @@
     <script src="https://kit.fontawesome.com/63b4afebca.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <?php
-    if(!isset($_SESSION['name'])) {
-        header("location: ../Login/Login.php"); }
-    ?>
-
-    <!-- This div is for the top navigation bar. -->
-
-    <div class="Navbar">
-        <ul>
-            <!-- This is the left part of the navbar. -->
-            <?php if($_SESSION['role'] == 'Admin') : ?>
-            <a href="../Home (Admin)/HomeAdmin.php"><img src="logo.png" class="Logo"></a>
-            <a href="../Home (Admin)/HomeAdmin.php" class="navname">UNIVERSITY LIBRARY</a>
-            <?php elseif($_SESSION['role'] == 'Student') : ?>
-            <a href="../Home (Student)/HomeStudent.php"><img src="logo.png" class="Logo"></a>
-            <a href="../Home (Student)/HomeStudent.php" class="navname">UNIVERSITY LIBRARY</a>
-            <?php endif; ?>
-            <!-- End of the left part of the navbar. -->
-
-    
-            <!-- This is the right part of the navbar. -->
-
-            <li><a href="../Login/Login.php">Log out</a></li>
-
-            
-            <!-- End ot the right part of the navbar. -->
-        </ul>
-    </div>
-    <!-- End of the navigation bar div. -->
+<?php  include '../Templates/Header.php';?>
 
     <div class="sortby">
-        <form action="BrowseBooks.php" method="POST">    
+        <form action="BrowseBooks.php" method="POST">
             <label >Sort By:</label>
             <select id="options" name="select">
                 <option value="" selected></option>
@@ -149,7 +119,7 @@
             <input type="submit" name="sorting_by" class="bookbtn" value="Sort"></input>
         </form>
     </div>
-    
+
     <!-- The Books and the page content -->
     <div class="grid-container">
         <?php foreach($books as $book): ?>
