@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Admin Home 2</title>
+    <title>Admin Home</title>
     <!-- Link for the logo in the title. -->
     <link rel="shortcut icon" href="logo.png" />
     <!-- Link for the stylesheet. -->
