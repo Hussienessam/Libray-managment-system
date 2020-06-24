@@ -98,6 +98,7 @@
             if (x == "") {
                 alert("Name must be filled out");
                 bool = false;
+                return (bool)
             }
             else {
                 bool = true;
@@ -108,6 +109,7 @@
             else {
                 alert("You have entered an invalid email address!")
                 bool = false;
+                return (bool)
             }
             if (form1.Password.value === form1.confirmPassword.value) {
                 bool = true;
@@ -115,10 +117,12 @@
             else {
                 alert("Not matched passwords")
                 bool = false;
+                return (bool)
             }
             if(form1.Password.value.length < 8 || form1.Password.value.length == 0) {
                 alert("Password should be at least 8 characters")
                 bool = false;
+                return (bool)
             }
             else {
                 bool = true;
