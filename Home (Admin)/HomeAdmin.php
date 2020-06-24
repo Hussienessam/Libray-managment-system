@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Admin Home</title>
+    <title>Admin Home 2</title>
     <!-- Link for the logo in the title. -->
     <link rel="shortcut icon" href="logo.png" />
     <!-- Link for the stylesheet. -->
@@ -30,17 +30,17 @@
             <a href="HomeAdmin.php" class="navname">UNIVERSITY LIBRARY</a>
 
             <!-- End of the left part of the navbar. -->
-            <li class="li2">  
+            <li class="li2">
                 <?php if(isset($_COOKIE['name'])) : ?>
                     <p><?php echo 'Hi: ' . $_COOKIE['name']; ?><p>
                 <?php else: ?>
                     <p><?php echo 'Hello, User';?><p>
                 <?php endif ?>
              </li>
-    
+
             <!-- This is the right part of the navbar. -->
             <li><a href="../Login/Login.php">Log out</a></li>
-            
+
             <!-- End ot the right part of the navbar. -->
         </ul>
     </div>
@@ -86,7 +86,7 @@
                 request.open("GET","sendMail.php",true);
                 request.send();
             }
-    </script>    
+    </script>
 
 </body>
 
