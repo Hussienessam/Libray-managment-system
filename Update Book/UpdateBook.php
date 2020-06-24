@@ -1,11 +1,5 @@
 <?php
 
-    $conn = mysqli_connect('localhost', 'Hussien', '1234', 'WebProject');
-
-    if(!$conn) {
-        echo 'Conncection error: ' . mysqli_connect_error();
-    }
-
     if(isset($_POST['Submit'])) {
         $bool = true;
         $ISBN = mysqli_real_escape_string($conn, $_POST['ISBN']);

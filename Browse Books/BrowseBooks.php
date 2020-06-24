@@ -1,13 +1,5 @@
 <?php
-    $conn = mysqli_connect('localhost', 'Hussien', '1234', 'WebProject');
-
-    if(!$conn) {
-        echo 'Conncection error: ' . mysqli_connect_error();
-    }
-    header('Expires: Sun, 01 Jan 2014 00:00:00 GMT');
-    header('Cache-Control: no-store, no-cache, must-revalidate');
-    header('Cache-Control: post-check=0, pre-check=0', FALSE);
-    header('Pragma: no-cache');
+    
     $sort_by = 'ID';
     $sql = "SELECT * FROM books ORDER BY {$sort_by}";
     $result = mysqli_query($conn, $sql);

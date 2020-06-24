@@ -1,3 +1,5 @@
+<?php include '../config/config.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
